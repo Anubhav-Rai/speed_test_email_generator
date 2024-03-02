@@ -1,0 +1,43 @@
+First setup a mail server on local system
+
+steps:-
+
+first install
+
+sudo apt update sudo apt install postfix mailutils
+
+During the installation on Debian/Ubuntu, you might be prompted to choose a configuration type. Select "Internet Site".
+
+Step 2: Configure Postfix Open the main Postfix configuration file with your preferred text editor. Here, nano is used for demonstration:
+
+sudo nano /etc/postfix/main.cf
+
+Add or modify the following lines to configure Postfix as a send-only mail server:
+
+myhostname = your_server_domain_or_IP myorigin = /etc/mailname mydestination = relayhost = mynetworks = 127.0.0.0/8 [::1]/128 inet_interfaces = loopback-only inet_protocols = ipv4
+
+myhostname: Set this to your server's fully qualified domain name (FQDN) or IP address if you don't have a domain. myorigin: This is used as the domain name in the "From" field of outgoing emails. Debian/Ubuntu systems automatically configure /etc/mailname during installation. mydestination: Leave this empty to prevent Postfix from trying to deliver emails locally. relayhost: Leave this empty unless you're using an external SMTP server to relay emails. mynetworks: Specifies the network addresses that are considered part of the local network and are allowed to send email. 127.0.0.0/8 allows only the local system to send mail. inet_interfaces: Setting this to loopback-only makes Postfix listen only on the localhost interface, which is suitable for a send-only setup. inet_protocols: Set to ipv4 if you do not need IPv6 support.
+
+Step 3: Restart Postfix After making changes, save the file and restart Postfix to apply the changes:
+
+sudo systemctl restart postfix
+
+Step 4: Test Email Sending Test sending an email with the mail utility:
+
+echo "Test email body" | mail -s "Test Email Subject" your_email@example.com
+
+Replace your_email@example.com with your actual email address.
+
+Step 5: Check the Mail Log for Errors If the email doesn't seem to be sent, check the mail log for any error messages:
+
+cat /var/log/mail.log
+
+journalctl -u postfix
+
+Then you need to setup cronjob
+
+crontab -e
+
+add this below line
+
+/59 * * * * /home/ar/anrai/cs/speedtest_cronjob/check_speed.sh #will run after every hour
