@@ -1,0 +1,46 @@
+Test conducted at: 2024-03-02 20:44:54
+Ping: 15.978 ms
+Download: 17.82 Mbit/s
+Upload: 22.29 Mbit/s
+---------------------------------
+Test conducted at: 2024-03-02 20:45:01
+Ping: 16.537 ms
+Download: 14.37 Mbit/s
+Upload: 46.76 Mbit/s
+---------------------------------
+Test conducted at: 2024-03-02 20:47:20
+Ping: 37.36 ms
+Download: 16.76 Mbit/s
+Upload: 43.04 Mbit/s
+---------------------------------
+Test conducted at: 2024-03-02 20:50:01
+Ping: 16.89 ms
+Download: 21.73 Mbit/s
+Upload: 49.69 Mbit/s
+---------------------------------
+Test conducted at: 2024-03-02 20:52:00
+Ping: 36.4 ms
+Download: 19.87 Mbit/s
+Upload: 50.13 Mbit/s
+---------------------------------
+Test conducted at: 2024-03-02 20:55:01
+Ping: 35.321 ms
+Download: 14.60 Mbit/s
+Upload: 48.74 Mbit/s
+---------------------------------
+Test conducted at: 2024-03-02 21:00:01
+
+---------------------------------
+Test conducted at: 2024-03-02 20:59:01
+Ping: 43.841 ms
+Download: 5.51 Mbit/s
+Upload: 10.01 Mbit/s
+---------------------------------
+Test conducted at: 2024-03-02 21:59:01
+Ping: 29.872 ms
+Download: 44.99 Mbit/s
+Upload: 57.66 Mbit/s
+---------------------------------
+Test conducted at: 2024-03-02 22:00:01
+
+---------------------------------
